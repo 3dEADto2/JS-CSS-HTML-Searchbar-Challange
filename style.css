@@ -1,0 +1,78 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #faebd7;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchbar-container {
+    height: 50px;
+    width: 300px;
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 6px 6px 10px rgba(0,0,0, .2), -6px -6px 10px rgba(224, 211, 193, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+    transition: width 1.5s linear;
+}
+
+.search-input {
+    background-color: transparent;
+    height: 40px;
+    width: 60%;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: rgb(100, 100, 100);
+}
+
+.searchbar-container img {
+    height: 30px;
+    width: 30px;
+}
+
+.img-magnifier {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.img-magnifier:active {
+    transform: scale(0.95);
+}
+
+.img-mic {
+    margin-right: 10px;
+    transition: width .4s linear;
+    transition-delay: 1s;
+}
+
+.active.searchbar-container {
+    width: 50px;
+}
+
+.active .img-magnifier {
+    margin-left: 6px;
+}
+
+.active .img-mic {
+    width: 0;
+}
+
+.active .search-input {
+    width: 0;
+}
